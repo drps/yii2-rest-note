@@ -1,0 +1,11 @@
+suite_namespace: api\tests\functional
+actor: RestTester
+modules:
+  enabled:
+    - Yii2:
+        part: [orm, fixtures]
+        entryScript: index-test.php
+    - REST:
+        depends: PhpBrowser
+        url: 'http://127.0.0.1/index-test.php'
+        part: [json]

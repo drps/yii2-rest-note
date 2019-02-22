@@ -13,4 +13,18 @@
 * Применятся миграции
 * Запустятся тесты для API
 
+Веб сервер будет доступен по адресу http://localhost:22080
 
+Доступные узлы
+
+```php
+'rules' => [
+    '/' => 'site/index',
+    'site/login' => 'site/login',
+    'GET notes' => 'note/index',
+    'GET notes/<id:\d+>' => 'note/show',
+    'POST notes' => 'note/create',
+    'PUT,PATCH notes/<id:\d+>' => 'note/update',
+    'DELETE notes/<id:\d+>' => 'note/delete',
+],
+```

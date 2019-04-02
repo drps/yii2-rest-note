@@ -11,6 +11,7 @@ $campaign = [
 
 $filter = $campaign['filter'];
 $params = $campaign['filter_params'];
+
 $query = CampaignFilter::applyFilter(
     User::find()->select(['id']),
     $filter,
